@@ -405,7 +405,7 @@ ul { padding: 0; list-style: none; }
 .st-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .st-list li { display: flex; gap: 10px; font-size: 17px; }
 .st-list li::before { content: ""; flex: none; width: 9px; height: 5px; margin-top: 9px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); }
-.st-todo { outline: 2px dashed #c75000; outline-offset: 4px; }
+.st-todo { }
 
 @media (prefers-reduced-motion: reduce) { .st-cue svg { animation: none; } }
 @media (max-width: 1000px) {
