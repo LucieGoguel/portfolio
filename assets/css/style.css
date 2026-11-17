@@ -408,6 +408,25 @@ ul { padding: 0; list-style: none; }
 .st-todo { }
 
 @media (prefers-reduced-motion: reduce) { .st-cue svg { animation: none; } }
+
+/* Long screenshots shown in a scrollable frame */
+.st-scroll { max-height: 640px; overflow-y: auto; border: 1px solid #ddd; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,.12); scrollbar-width: thin; }
+.st-scroll img { display: block; width: 100%; height: auto; }
+.st-scroll:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.st-wide { margin: 32px 0 0; background: #fff; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,.08); }
+.st-wide img { display: block; width: 100%; height: auto; }
+.st-wide figcaption { margin-top: 14px; font-size: 16px; }
+.st-wide figcaption strong { display: block; font-family: var(--mono); font-size: 14px; letter-spacing: .04em; text-transform: uppercase; }
+.st-flow { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 28px; margin-top: 32px; }
+.st-flow .st-card h3 { margin-bottom: 18px; }
+.st-flow ol { margin: 0 0 18px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.st-flow ol li { font-size: 14px; background: #f1f1f1; padding: 4px 10px; border-radius: 99px; }
+.st-flow ol li + li::before { content: "→ "; color: #888; }
+.st-flow dl { margin: 0; display: grid; gap: 14px; }
+.st-flow dt { font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+.st-flow dd { margin: 4px 0 0; font-size: 16px; }
+@media (max-width: 1000px) { .st-flow { grid-template-columns: 1fr; } .st-scroll { max-height: 520px; } }
+
 @media (max-width: 1000px) {
   .st-hero__grid, .st-results, .st-split, .st-arbo { grid-template-columns: 1fr; }
   .st-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -425,3 +444,10 @@ ul { padding: 0; list-style: none; }
   .st-screens { grid-template-columns: 1fr; }
 }
 .cs-next { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; background: var(--black); color: var(--white); padding: 56px var(--side); border-top: 10px solid var(--black); }
+
+/* KPIs on a black section */
+.st-section--black .st-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.st-section--black .st-kpi { background: transparent; filter: none; border-top: 2px solid var(--cyan); padding: 20px 0 0; }
+.st-section--black .st-kpi b { color: var(--cyan); font-size: clamp(40px, 4vw, 56px); }
+.st-section--black .st-kpi small { color: #bbb; }
+@media (max-width: 560px) { .st-section--black .st-kpis { grid-template-columns: 1fr 1fr; } }
