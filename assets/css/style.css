@@ -145,7 +145,7 @@ ul { padding: 0; list-style: none; }
 /* ==========================================================
    PARTIE II : PROJETS
    ========================================================== */
-.projects { display: flex; flex-direction: column; gap: 44px; padding: 71px var(--pad) 200px; border-bottom: 10px solid var(--black); }
+.projects { display: flex; flex-direction: column; gap: 24px; padding: 71px var(--pad) 200px; border-bottom: 10px solid var(--black); }
 .projects__head { display: flex; flex-direction: column; gap: 16px; align-self: flex-start; }
 .projects__intro { letter-spacing: -0.04em; }
 .projects__list { display: flex; flex-direction: column; gap: 48px; }
