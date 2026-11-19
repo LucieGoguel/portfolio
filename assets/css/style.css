@@ -179,7 +179,7 @@ ul { padding: 0; list-style: none; }
    PARTIE III : À PROPOS
    ========================================================== */
 .about { display: flex; justify-content: space-between; align-items: flex-start; overflow: hidden; padding-left: max(var(--pad), calc((100% - 1600px) / 2)); }
-.about__left { flex: none; width: min(750px, 100%); display: flex; flex-direction: column; gap: 16px; padding: 75px var(--pad) 200px 0; }
+.about__left { flex: none; width: min(750px, 100%); display: flex; flex-direction: column; gap: 44px; padding: 75px var(--pad) 200px 0; }
 .about .section-head { --bar: 200px; }
 .about__body { display: flex; flex-direction: column; gap: 44px; }
 .about__texts { display: flex; flex-direction: column; gap: 16px; }
