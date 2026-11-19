@@ -145,7 +145,7 @@ ul { padding: 0; list-style: none; }
 /* ==========================================================
    PARTIE II : PROJETS
    ========================================================== */
-.projects { display: flex; flex-direction: column; gap: 44px; padding: 75px var(--pad) 200px; border-bottom: 10px solid var(--black); }
+.projects { display: flex; flex-direction: column; gap: 44px; padding: 71px var(--pad) 200px; border-bottom: 10px solid var(--black); }
 .projects__head { display: flex; flex-direction: column; gap: 16px; align-self: flex-start; }
 .projects__intro { letter-spacing: -0.04em; }
 .projects__list { display: flex; flex-direction: column; gap: 48px; }
@@ -157,18 +157,18 @@ ul { padding: 0; list-style: none; }
   padding: 24px 48px; border-right: 10px solid var(--black);
 }
 .card__titles { display: flex; flex-direction: column; gap: 8px; width: 100%; }
-.card__titlerow { display: flex; align-items: center; gap: 16px; color: var(--title-grey); font-size: 22px; text-transform: uppercase; }
-.card__title { flex: 1 1 0; min-width: 0; font-weight: 400; font-size: 22px; }
+.card__titlerow { display: flex; align-items: center; gap: 16px; color: var(--title-grey); font-size: 21px; text-transform: uppercase; }
+.card__title { flex: 1 1 0; min-width: 0; font-weight: 400; font-size: 21px; }
 .card__date { white-space: nowrap; }
 .card__role { font-weight: 700; font-size: 18px; text-transform: uppercase; }
 .card__role .sep { white-space: pre; }
 
 .card__list { display: flex; flex-direction: column; gap: 24px; width: 100%; }
-.card__group { display: flex; flex-direction: column; gap: 8px; }
+.card__group { display: flex; flex-direction: column; gap: 8px; font-size: 16px; }
 .card__label { color: var(--label-grey); font-weight: 600; font-size: 14px; text-transform: uppercase; }
 .checklist { display: flex; flex-direction: column; gap: 4px; }
 .checklist li { display: flex; align-items: flex-start; gap: 8px; }
-.checklist svg { flex: none; width: 11px; height: 8px; margin-top: 6px; }
+.checklist svg { flex: none; width: 11px; height: 8px; margin-top: 5px; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tags li { background: var(--white); border: 1px solid var(--tag-border); padding: 4px 10px; }
 
