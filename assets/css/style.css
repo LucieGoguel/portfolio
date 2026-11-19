@@ -201,7 +201,7 @@ ul { padding: 0; list-style: none; }
 .contact__left { flex: none; width: min(750px, 50%); display: flex; flex-direction: column; gap: 24px; padding: 75px var(--pad) 200px var(--side); }
 .contact .section-head { --bar: 75px; }
 .contact .section-title { padding-left: 75px; }
-.contact__text-big { font-size: 22px; }
+.contact__text-big { font-size: 24px; }
 .contact__right { flex: none; width: min(600px, 50%); display: flex; flex-direction: column; justify-content: center; gap: 24px; padding: 40px var(--side) 40px 0; }
 .contact__buttons { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .contact__social-group { display: flex; flex-direction: column; gap: 12px; }
