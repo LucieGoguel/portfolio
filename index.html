@@ -282,5 +282,22 @@
       <svg aria-hidden="true" width="12" height="15" viewBox="0 0 12 15" fill="currentColor"><path d="M0 6.4 1 7.4l4.3-4.3V15h1.4V3.1L11 7.4l1-1L6 .4z"/></svg>
     </a>
   </footer>
+  <script>
+    // Arrivée avec une ancre (#projets, #contact…) : on se repositionne une fois
+    // les polices et les images chargées, car elles décalent la page.
+    (function () {
+      if (!location.hash) return;
+      function go() {
+        var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      window.addEventListener('load', function () {
+        (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () {
+          requestAnimationFrame(go);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
