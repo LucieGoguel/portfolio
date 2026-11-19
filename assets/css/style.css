@@ -178,8 +178,8 @@ ul { padding: 0; list-style: none; }
 /* ==========================================================
    PARTIE III : À PROPOS
    ========================================================== */
-.about { display: flex; justify-content: space-between; align-items: flex-start; overflow: hidden; }
-.about__left { flex: none; width: min(750px, 100%); display: flex; flex-direction: column; gap: 16px; padding: 75px var(--pad) 200px var(--side); }
+.about { display: flex; justify-content: space-between; align-items: flex-start; overflow: hidden; padding-left: max(var(--pad), calc((100% - 1600px) / 2)); }
+.about__left { flex: none; width: min(750px, 100%); display: flex; flex-direction: column; gap: 16px; padding: 75px var(--pad) 200px 0; }
 .about .section-head { --bar: 200px; }
 .about__body { display: flex; flex-direction: column; gap: 44px; }
 .about__texts { display: flex; flex-direction: column; gap: 16px; }
@@ -250,8 +250,8 @@ ul { padding: 0; list-style: none; }
   .status-tag { padding: 14px 20px; }
   .hero__intro { padding-right: var(--pad); width: 100%; }
 
-  .about { flex-direction: column; }
-  .about__left { width: 100%; padding-bottom: 40px; padding-right: var(--side); }
+  .about { flex-direction: column; padding-left: 0; }
+  .about__left { width: 100%; padding-bottom: 40px; padding-right: var(--side); padding-left: var(--pad); }
   .about__wolf { width: min(420px, 80%); margin: 0 auto 60px; }
 
   .contact { flex-direction: column; }
