@@ -193,6 +193,7 @@ ul { padding: 0; list-style: none; }
 .quote .q-close { right: 16px; bottom: 22px; }
 .about__wolf { flex: none; width: min(652px, 42vw); }
 .about__wolf img { width: 100%; }
+.about__wolf picture { display: block; }
 
 /* ==========================================================
    PARTIE IV : CONTACT + PARTIE V : FOOTER
@@ -232,14 +233,7 @@ ul { padding: 0; list-style: none; }
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
-@media (max-width: 1180px) {
-  .card { flex-direction: column-reverse; }
-  .card__body { flex: none; border-right: 0; border-top: 10px solid var(--black); width: 100%; }
-  .card__media { flex: none; width: 100%; min-width: 0; max-width: none; aspect-ratio: 1920 / 1107; }
-  .about__wolf { width: min(520px, 40vw); align-self: center; }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .hero { flex-direction: column-reverse; }
   .hero__photo { width: 100%; min-height: 0; aspect-ratio: 4 / 5; max-height: 90vh; }
   .nav { justify-content: center; padding: 24px 20px 0; }
@@ -249,10 +243,16 @@ ul { padding: 0; list-style: none; }
   .hero__hiring { padding: 36px 0 40px; }
   .status-tag { padding: 14px 20px; }
   .hero__intro { padding-right: var(--pad); width: 100%; }
-
+  .card { flex-direction: column-reverse; }
+  .card__body { flex: none; border-right: 0; border-top: 10px solid var(--black); width: 100%; }
+  .card__media { flex: none; width: 100%; min-width: 0; max-width: none; aspect-ratio: 1920 / 1107; }
   .about { flex-direction: column; padding-left: 0; }
-  .about__left { width: 100%; padding-bottom: 40px; padding-right: var(--side); padding-left: var(--pad); }
-  .about__wolf { width: min(420px, 80%); margin: 0 auto 60px; }
+  .about__left { width: 100%; padding-bottom: 40px; padding-right: var(--pad); padding-left: var(--pad); }
+  .about__wolf { width: min(560px, calc(100% - 2 * var(--pad))); align-self: center; margin: 0 auto 80px; }
+}
+
+@media (max-width: 750px) {
+
 
   .contact { flex-direction: column; }
   .contact__left, .contact__right { width: 100%; padding: 60px var(--side) 0; }
@@ -264,7 +264,7 @@ ul { padding: 0; list-style: none; }
   .soon__plume { position: static; display: block; width: 70%; margin: 0 0 24px auto; }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 750px) {
   .card__body { padding: 24px 22px; gap: 32px; }
   .card__titlerow { flex-direction: column; align-items: flex-start; gap: 4px; }
   .card__role .sep { display: none; }
@@ -426,9 +426,9 @@ ul { padding: 0; list-style: none; }
 .st-flow dl { margin: 0; display: grid; gap: 14px; }
 .st-flow dt { font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
 .st-flow dd { margin: 4px 0 0; font-size: 16px; }
-@media (max-width: 1000px) { .st-flow { grid-template-columns: 1fr; } .st-scroll { max-height: 520px; } }
+@media (max-width: 1023px) { .st-flow { grid-template-columns: 1fr; } .st-scroll { max-height: 520px; } }
 
-@media (max-width: 1000px) {
+@media (max-width: 1023px) {
   .st-hero__grid, .st-results, .st-split, .st-arbo { grid-template-columns: 1fr; }
   .st-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .st-facts div:nth-child(3) { border-left: 0; }
@@ -437,7 +437,7 @@ ul { padding: 0; list-style: none; }
   .st-photos, .st-supports { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .st-kit, .st-supports2 { grid-template-columns: 1fr; }
 }
-@media (max-width: 560px) {
+@media (max-width: 750px) {
   .st { font-size: 18px; }
   .st-bars div { grid-template-columns: 110px minmax(0, 1fr) 72px; gap: 10px; }
   .st-persona { grid-template-columns: 1fr; }
@@ -451,4 +451,4 @@ ul { padding: 0; list-style: none; }
 .st-section--black .st-kpi { background: transparent; filter: none; border-top: 2px solid var(--cyan); padding: 20px 0 0; }
 .st-section--black .st-kpi b { color: var(--cyan); font-size: clamp(40px, 4vw, 56px); }
 .st-section--black .st-kpi small { color: #bbb; }
-@media (max-width: 560px) { .st-section--black .st-kpis { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 750px) { .st-section--black .st-kpis { grid-template-columns: 1fr 1fr; } }
