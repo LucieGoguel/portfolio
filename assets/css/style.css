@@ -271,6 +271,8 @@ ul { padding: 0; list-style: none; }
   .card__role .sep { display: none; }
   .card__role span { display: block; }
   .card__date { text-transform: none; font-size: 18px; }
+  .about__left { padding-bottom: 0; }
+  .about__wolf { margin: 0 auto 20px; }
   .hero__name { font-size: 34px; }
   .quote { padding: 40px 24px 44px; }
 }
