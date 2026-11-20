@@ -108,6 +108,9 @@ ul { padding: 0; list-style: none; }
 }
 .nav a::after { content: ""; height: 2px; background: transparent; transition: background-color .2s ease; }
 .nav a:hover::after, .nav a[aria-current="page"]::after { background: var(--black); }
+/* Menu hamburger : caché au-delà du mobile */
+.nav__toggle { display: none; }
+
 
 /* Product Designer */
 .hero__title { display: flex; align-items: flex-start; gap: clamp(24px, 4.8vw, 74px); padding-top: 100px; }
@@ -475,3 +478,30 @@ ul { padding: 0; list-style: none; }
 .st-section--black .st-kpi b { color: var(--cyan); font-size: clamp(40px, 4vw, 56px); }
 .st-section--black .st-kpi small { color: #bbb; }
 @media (max-width: 750px) { .st-section--black .st-kpis { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Menu hamburger (mobile) ---------- */
+@media (max-width: 750px) {
+  .nav { justify-content: flex-end; padding: 16px var(--pad) 0; }
+  .topbar .inner { padding: 16px var(--side); flex-wrap: nowrap; }
+  .topbar__home { font-size: 26px; }
+  .nav__toggle {
+    display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+    background: transparent; color: var(--black); border: 2px solid var(--black); cursor: pointer;
+    position: relative; z-index: 101;
+  }
+  .nav__toggle:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+  .nav__icon-close { display: none; }
+  .nav ul { display: none; }
+  .nav.is-open ul {
+    display: flex; position: fixed; inset: 0; z-index: 100;
+    flex-direction: column; justify-content: center; align-items: center; gap: 36px;
+    background: var(--black);
+  }
+  .nav.is-open ul a { color: var(--white); font-size: 26px; }
+  .nav.is-open ul a:hover::after, .nav.is-open ul a[aria-current="page"]::after { background: var(--white); }
+  .nav.is-open .nav__toggle { position: fixed; top: 16px; right: var(--pad); color: var(--white); border-color: var(--white); }
+  .nav.is-open .nav__icon-open { display: none; }
+  .nav.is-open .nav__icon-close { display: block; }
+  body.menu-open { overflow: hidden; }
+  body.menu-open .to-top { display: none; }
+}
