@@ -252,7 +252,7 @@ ul { padding: 0; list-style: none; }
    ========================================================== */
 @media (max-width: 1023px) {
   .hero { flex-direction: column-reverse; }
-  .hero__photo { width: 100%; min-height: 0; aspect-ratio: 4 / 5; max-height: 90vh; }
+  .hero__photo { width: 100%; max-width: 525px; align-self: flex-start; min-height: 0; aspect-ratio: 4 / 5; max-height: 90vh; }
   .nav { justify-content: center; padding: 24px 20px 0; }
   .nav ul { justify-content: center; }
   .hero__title { padding-top: 48px; }
