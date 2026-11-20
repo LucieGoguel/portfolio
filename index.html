@@ -306,11 +306,16 @@
   <script>
     (function () {
       var b = document.querySelector('.to-top');
-      var dark = document.querySelectorAll('.contact, .footer, .st-section--black');
+      var dark = document.querySelectorAll('.contact, .footer, .st-section--black'), wolf = document.querySelector('.about__wolf img');
       function upd() {
         b.classList.toggle('is-visible', window.scrollY > 300);
         var r = b.getBoundingClientRect(), y = r.top + r.height / 2, onDark = false;
         dark.forEach(function (d) { var q = d.getBoundingClientRect(); if (y >= q.top && y <= q.bottom) onDark = true; });
+        // Desktop : le loup touche le bord droit, juste sous le bouton
+        if (wolf && window.innerWidth >= 1024) {
+          var w = wolf.getBoundingClientRect(), x = r.left + r.width / 2;
+          if (y >= w.top && y <= w.bottom && x >= w.left && x <= w.right) onDark = true;
+        }
         b.classList.toggle('is-dark', onDark);
       }
       window.addEventListener('resize', upd);
