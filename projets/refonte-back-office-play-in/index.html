@@ -217,9 +217,17 @@
 
   <footer class="footer">
     <p>© 2026 Lucie Goguel - Product Designer, Paris</p>
-    <a href="#contenu">Retour vers le haut
-      <svg aria-hidden="true" width="12" height="15" viewBox="0 0 12 15" fill="currentColor"><path d="M0 6.4 1 7.4l4.3-4.3V15h1.4V3.1L11 7.4l1-1L6 .4z"/></svg>
-    </a>
+    <p class="footer__credit">Site conçu avec Claude et hébergé sur GitHub Pages</p>
   </footer>
+  <a class="to-top" href="#" aria-label="Retour en haut de la page">
+    <svg aria-hidden="true" width="14" height="18" viewBox="0 0 12 15" fill="currentColor"><path d="M0 6.4 1 7.4l4.3-4.3V15h1.4V3.1L11 7.4l1-1L6 .4z"/></svg>
+  </a>
+  <script>
+    (function () {
+      var b = document.querySelector('.to-top');
+      function upd() { b.classList.toggle('is-visible', window.scrollY > 300); }
+      window.addEventListener('scroll', upd, { passive: true }); upd();
+    })();
+  </script>
 </body>
 </html>
