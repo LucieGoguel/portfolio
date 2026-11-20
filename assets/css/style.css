@@ -270,8 +270,7 @@ ul { padding: 0; list-style: none; }
   .card__titlerow { flex-direction: column; align-items: flex-start; gap: 4px; }
   .card__role .sep { display: none; }
   .card__role span { display: block; }
-  .card__date { text-transform: none; }
-  .card__role span:last-child { text-transform: none; }
+  .card__date { text-transform: none; font-size: 18px; }
   .hero__name { font-size: 34px; }
   .quote { padding: 40px 24px 44px; }
 }
