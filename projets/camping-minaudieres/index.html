@@ -311,7 +311,14 @@
   <script>
     (function () {
       var b = document.querySelector('.to-top');
-      function upd() { b.classList.toggle('is-visible', window.scrollY > 300); }
+      var dark = document.querySelectorAll('.contact, .footer, .st-section--black');
+      function upd() {
+        b.classList.toggle('is-visible', window.scrollY > 300);
+        var r = b.getBoundingClientRect(), y = r.top + r.height / 2, onDark = false;
+        dark.forEach(function (d) { var q = d.getBoundingClientRect(); if (y >= q.top && y <= q.bottom) onDark = true; });
+        b.classList.toggle('is-dark', onDark);
+      }
+      window.addEventListener('resize', upd);
       window.addEventListener('scroll', upd, { passive: true }); upd();
     })();
   </script>

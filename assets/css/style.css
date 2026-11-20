@@ -223,6 +223,8 @@ ul { padding: 0; list-style: none; }
 }
 .to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
 .to-top:hover { background: var(--black); color: var(--white); }
+.to-top.is-dark { color: var(--white); border-color: var(--white); }
+.to-top.is-dark:hover { background: var(--white); color: var(--black); }
 .to-top:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
 @media (max-width: 750px) { .to-top { right: 16px; bottom: 16px; width: 44px; height: 44px; } }
 @media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
