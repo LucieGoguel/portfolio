@@ -313,7 +313,10 @@
       var b = document.querySelector('.to-top');
       var dark = document.querySelectorAll('.contact, .footer, .st-section--black');
       function upd() {
-        b.classList.toggle('is-visible', window.scrollY > 300);
+        // Apparaît après 300 px de défilement, ne disparaît qu'à 100 px du haut
+        var sy = window.scrollY;
+        if (sy > 300) b.classList.add('is-visible');
+        else if (sy < 100) b.classList.remove('is-visible');
         var r = b.getBoundingClientRect(), y = r.top + r.height / 2, onDark = false;
         dark.forEach(function (d) { var q = d.getBoundingClientRect(); if (y >= q.top && y <= q.bottom) onDark = true; });
         b.classList.toggle('is-dark', onDark);
