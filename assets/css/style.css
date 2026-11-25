@@ -500,6 +500,7 @@ ul { padding: 0; list-style: none; }
 .st-section--black .st-kpi { background: transparent; filter: none; border-top: 2px solid var(--cyan); padding: 20px 0 0; }
 .st-section--black .st-kpi b { color: var(--cyan); font-size: clamp(40px, 4vw, 56px); }
 .st-section--black .st-kpi small { color: #bbb; }
+.st-section--black .st-kpis--plain .st-kpi { border-top: 0; padding-top: 0; }
 @media (max-width: 750px) { .st-section--black .st-kpis { grid-template-columns: 1fr 1fr; } }
 
 /* ---------- Menu hamburger (mobile) ---------- */
