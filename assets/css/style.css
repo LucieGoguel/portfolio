@@ -486,6 +486,13 @@ ul { padding: 0; list-style: none; }
 @media (max-width: 1023px) { .st-wfs { grid-template-columns: 1fr; } }
 @media (max-width: 750px) { .st-wf { padding: 14px; } .st-wf__pair .st-scroll { height: 340px; } }
 
+/* Rythme vertical commun à toutes les rubriques des études de cas */
+.st-wrap > * + * { margin-top: 40px; }
+.st-wrap > .st-h2 + * { margin-top: 0; }
+.st-wrap > .st-h3, .st-wrap > .st-arbo { margin-top: 56px; }
+.st-wrap > .st-h3 + * { margin-top: 16px; }
+.st-wrap > .st-note { margin-top: 20px; }
+
 /* KPIs on a black section */
 .st-section--black .st-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .st-section--black .st-kpi { background: transparent; filter: none; border-top: 2px solid var(--cyan); padding: 20px 0 0; }
