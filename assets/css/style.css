@@ -399,7 +399,8 @@ ul { padding: 0; list-style: none; }
 .st-tag { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; margin-right: 6px; text-transform: uppercase; }
 .st-tag--plus { background: #e8f3f1; color: #1d5c50; }
 .st-tag--minus { background: #fbe9e4; color: #8a2f13; }
-.st-arbo { margin-top: 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.st-arbo { margin-top: 56px; display: flex; flex-direction: column; gap: 24px; }
+.st-arbo > div p:not(.st-h3) { max-width: none; }
 
 /* ---------- Contenus ---------- */
 .st-photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 32px; }
@@ -539,3 +540,22 @@ ul { padding: 0; list-style: none; }
 .st-wf--mob .st-wf__img img { max-width: 250px; }
 .st-btn-demo--pi { font-family: "Montserrat", sans-serif; font-weight: 400; border-radius: 99px; border: 3px solid #efefef; background: linear-gradient(100deg, #65587D 0%, #190F2C 100%); color: #fff; }
 .st-btn-demo--promo { background: linear-gradient(80deg, #FFE2A9 0%, #E89A00 100%); color: #000; }
+/* Arborescence camping en HTML (nette à toutes les tailles) */
+.cs-arbo { padding: 40px clamp(16px, 3vw, 40px) 44px; font-family: "Barlow Semi Condensed", sans-serif; font-size: 16px; }
+.cs-arbo ul { list-style: none; margin: 0; padding: 0; }
+.cs-arbo__root { width: max-content; margin: 0 auto; background: #1a4b41; color: #fff; padding: 10px 22px; font-size: 18px; position: relative; }
+.cs-arbo__root::after { content: ""; position: absolute; left: 50%; top: 100%; height: 22px; border-left: 1.5px solid #888; }
+.cs-arbo__l1 { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; margin-top: 44px !important; position: relative; }
+.cs-arbo__l1::before { content: ""; position: absolute; top: -22px; left: calc(100% / 16); right: calc(100% / 16); border-top: 1.5px solid #888; }
+.cs-arbo__l1 > li { position: relative; display: flex; flex-direction: column; align-items: center; }
+.cs-arbo__l1 > li::before { content: ""; position: absolute; top: -22px; left: 50%; height: 22px; border-left: 1.5px solid #888; }
+.cs-arbo__l1 > li > span { display: block; width: 100%; text-align: center; background: #ede0dd; color: #222; padding: 8px 4px; }
+.cs-arbo__l1 > li > ul { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; width: 100%; padding-left: 14px; border-left: 1.5px solid #888; }
+.cs-arbo__l1 > li > ul li { background: #c9a27a; color: #fff; padding: 6px 10px; position: relative; line-height: 1.25; font-size: 15px; }
+.cs-arbo__l1 > li > ul li::before { content: ""; position: absolute; right: 100%; top: 50%; width: 14px; border-top: 1.5px solid #888; }
+@media (max-width: 1023px) {
+  .cs-arbo__l1 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-arbo__l1::before, .cs-arbo__l1 > li::before { display: none; }
+  .cs-arbo__root::after { display: none; }
+  .cs-arbo__l1 { margin-top: 24px !important; }
+}
