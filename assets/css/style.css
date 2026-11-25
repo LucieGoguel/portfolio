@@ -303,7 +303,7 @@ ul { padding: 0; list-style: none; }
    ÉTUDE DE CAS — mise en page orientée recruteur
    ========================================================== */
 .st { --st-max: 1240px; --st-gap: clamp(56px, 6vw, 88px); font-size: 19px; line-height: 1.5; }
-.st-wrap { max-width: var(--st-max); margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); }
+.st-wrap { max-width: var(--st-max); margin: 0 auto; padding: 0 clamp(20px, 3vw, 40px); }
 .st-section { padding: var(--st-gap) 0; }
 .st-section--white { background: transparent; }
 .st-section--black { background: var(--black); color: var(--white); }
