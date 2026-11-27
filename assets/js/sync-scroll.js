@@ -1,5 +1,5 @@
-/* Desktop : les captures desktop et mobile d'une même page défilent ensemble,
-   avec une seule barre de défilement (celle de la version desktop). */
+/* Desktop : les captures desktop et mobile d’une même page défilent ensemble,
+   avec une seule barre de défilement, à droite (celle de la version mobile). */
 (function () {
   var mq = window.matchMedia('(min-width: 1024px)');
   document.querySelectorAll('.st-wf__pair').forEach(function (pair) {

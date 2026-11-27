@@ -597,6 +597,6 @@ ul { padding: 0; list-style: none; }
 @media (max-width: 750px) { .st-wf--full .st-wf__pair .st-scroll { height: 340px; } }
 /* Défilement synchronisé desktop/mobile : une seule barre visible sur desktop */
 @media (min-width: 1024px) {
-  .st-wf__pair--sync .st-wf__col + .st-wf__col .st-scroll { scrollbar-width: none; }
-  .st-wf__pair--sync .st-wf__col + .st-wf__col .st-scroll::-webkit-scrollbar { display: none; }
+  .st-wf__pair--sync .st-wf__col:first-child .st-scroll { scrollbar-width: none; }
+  .st-wf__pair--sync .st-wf__col:first-child .st-scroll::-webkit-scrollbar { display: none; }
 }
