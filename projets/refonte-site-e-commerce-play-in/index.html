@@ -300,5 +300,20 @@
       window.addEventListener('resize', function () { if (window.innerWidth > 750) set(false); });
     })();
   </script>
+<script>
+  // Récapitulatif du panier : fond blanc autour du bloc seulement une fois qu’il est fixé
+  document.querySelectorAll('.st-sticky-host').forEach(function (host) {
+    var stick = host.querySelector('.st-stick'); if (!stick) return;
+    var img = stick.querySelector('img');
+    function update() {
+      var cs = getComputedStyle(img);
+      var start = parseFloat(cs.marginTop) - parseFloat(cs.top);
+      stick.classList.toggle('is-stuck', host.scrollTop > start);
+    }
+    host.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+</script>
 </body>
 </html>

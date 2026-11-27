@@ -605,4 +605,4 @@ section[aria-labelledby="t-wire"] .st-wf--full .st-wf__pair { column-gap: 48px; 
 .st-stick { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .st-stick img { position: sticky; display: block; height: auto; }
 .st-scroll img.st-stick-bottom { position: sticky; bottom: 0; z-index: 1; }
-.st-stick img { --c: calc(var(--t, 0px) + 4px); box-shadow: 0 calc(var(--c) * -1) 0 #fff, var(--c) 0 0 #fff, var(--c) calc(var(--c) * -1) 0 #fff; }
+.st-stick.is-stuck img { --c: calc(var(--t, 0px) + 4px); box-shadow: 0 calc(var(--c) * -1) 0 #fff, var(--c) 0 0 #fff, var(--c) calc(var(--c) * -1) 0 #fff; }
