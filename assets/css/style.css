@@ -598,12 +598,13 @@ ul { padding: 0; list-style: none; }
 /* Wireframes : cadre façon fenêtre de navigateur autour des versions desktop,
    même gris que le contour des maquettes mobiles, sans marge autour de l'image */
 section[aria-labelledby="t-wire"] .st-wf__desk.st-scroll {
-  border: 8px solid transparent; border-top-width: 26px; border-radius: 12px;
+  border: 2px solid transparent; border-top-width: 30px; border-radius: 6px 6px 0 0;
   background:
-    radial-gradient(circle, #a6a6a6 4px, transparent 4.5px) 10px -1px / 14px 26px no-repeat border-box,
-    radial-gradient(circle, #a6a6a6 4px, transparent 4.5px) 26px -1px / 14px 26px no-repeat border-box,
-    radial-gradient(circle, #a6a6a6 4px, transparent 4.5px) 42px -1px / 14px 26px no-repeat border-box,
+    radial-gradient(circle, #a6a6a6 4.5px, transparent 5px) 6px -2px / 16px 30px no-repeat border-box,
+    radial-gradient(circle, #a6a6a6 4.5px, transparent 5px) 22px -2px / 16px 30px no-repeat border-box,
+    radial-gradient(circle, #a6a6a6 4.5px, transparent 5px) 38px -2px / 16px 30px no-repeat border-box,
+    linear-gradient(#fff, #fff) 68px 7px / calc(100% - 80px) 14px no-repeat border-box,
     #d9d9d9 border-box;
-  box-shadow: none; padding: 0;
+  box-shadow: 0 12px 30px rgba(0,0,0,.10); padding: 0;
 }
 section[aria-labelledby="t-wire"] .st-wf__desk.st-scroll img { background: #fff; }
