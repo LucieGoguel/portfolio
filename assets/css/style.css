@@ -580,3 +580,4 @@ ul { padding: 0; list-style: none; }
 .st-wrap > .st-lead + .st-photos { margin-top: 20px; }
 #chiffres .st-kpi span { font-size: 22px; }
 #chiffres .st-kpi small { font-size: 16px; }
+.st-learn--plain td:last-child { font-weight: 400; }
