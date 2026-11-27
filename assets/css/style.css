@@ -595,3 +595,15 @@ ul { padding: 0; list-style: none; }
 .st-wfs > .st-wf--full { grid-column: 1 / -1; }
 .st-wf--full .st-wf__pair .st-scroll { height: 640px; }
 @media (max-width: 750px) { .st-wf--full .st-wf__pair .st-scroll { height: 340px; } }
+/* Wireframes : cadre façon fenêtre de navigateur autour des versions desktop,
+   même gris que le contour des maquettes mobiles, sans marge autour de l'image */
+section[aria-labelledby="t-wire"] .st-wf__desk.st-scroll {
+  border: 8px solid transparent; border-top-width: 26px; border-radius: 12px;
+  background:
+    radial-gradient(circle, #a6a6a6 4px, transparent 4.5px) 10px -1px / 14px 26px no-repeat border-box,
+    radial-gradient(circle, #a6a6a6 4px, transparent 4.5px) 26px -1px / 14px 26px no-repeat border-box,
+    radial-gradient(circle, #a6a6a6 4px, transparent 4.5px) 42px -1px / 14px 26px no-repeat border-box,
+    #d9d9d9 border-box;
+  box-shadow: none; padding: 0;
+}
+section[aria-labelledby="t-wire"] .st-wf__desk.st-scroll img { background: #fff; }
