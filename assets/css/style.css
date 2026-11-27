@@ -582,3 +582,4 @@ ul { padding: 0; list-style: none; }
 #chiffres .st-kpi small, #resultats .st-kpis--plain .st-kpi small { font-size: 16px; }
 .st-learn--plain td:last-child { font-weight: 400; }
 .st-btn-demo--pi { font-size: 16px; }
+#recherche .st-lead { max-width: none; }
