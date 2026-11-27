@@ -599,3 +599,6 @@ ul { padding: 0; list-style: none; }
 section[aria-labelledby="t-wire"] .st-wf__pair { column-gap: 32px; }
 section[aria-labelledby="t-wire"] .st-wf--full .st-wf__pair { column-gap: 48px; }
 @media (min-width: 751px) { section[aria-labelledby="t-wire"] .st-wf--full .st-wf__pair .st-scroll { height: 600px; } }
+/* Bloc qui reste fixe au défilement dans une capture (ex. récapitulatif du panier) */
+.st-stick { position: sticky; top: 0; height: 0; z-index: 1; }
+.st-stick img { position: absolute; top: 0; display: block; height: auto; }
