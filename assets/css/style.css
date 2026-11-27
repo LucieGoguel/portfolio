@@ -577,3 +577,4 @@ ul { padding: 0; list-style: none; }
   .st-persona > div { padding: 24px 20px 0; }
   .st-persona blockquote { margin: 20px; }
 }
+.st-wrap > .st-lead + .st-photos { margin-top: 20px; }
