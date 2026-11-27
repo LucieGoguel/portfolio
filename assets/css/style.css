@@ -592,3 +592,6 @@ ul { padding: 0; list-style: none; }
 @media (max-width: 1023px) { .st-wf--fill .st-wf__pair .st-scroll { flex: none; height: 420px; } }
 .st-wf__img img.st-match-scroll { height: 420px; object-fit: cover; object-position: top; }
 @media (max-width: 750px) { .st-wf__img img.st-match-scroll { height: 340px; } }
+.st-wfs > .st-wf--full { grid-column: 1 / -1; }
+.st-wf--full .st-wf__pair .st-scroll { height: 640px; }
+@media (max-width: 750px) { .st-wf--full .st-wf__pair .st-scroll { height: 340px; } }
