@@ -8,10 +8,10 @@
     var lock = false;
     function sync(from, to) {
       if (!mq.matches || lock) return;
-      var max = from.scrollHeight - from.clientHeight;
-      var ratio = max > 0 ? from.scrollTop / max : 0;
+      // Même décalage en pixels : les deux images défilent à la même vitesse
+      // (la plus courte s'arrête simplement en bas quand elle est finie).
       lock = true;
-      to.scrollTop = ratio * (to.scrollHeight - to.clientHeight);
+      to.scrollTop = Math.min(from.scrollTop, to.scrollHeight - to.clientHeight);
       requestAnimationFrame(function () { lock = false; });
     }
     frames[0].addEventListener('scroll', function () { sync(frames[0], frames[1]); }, { passive: true });
