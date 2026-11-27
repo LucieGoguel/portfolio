@@ -381,7 +381,8 @@ ul { padding: 0; list-style: none; }
 .st-persona dl div { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 10px; }
 .st-persona dt { font-family: var(--mono); font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding-top: 3px; }
 .st-persona dd { margin: 0; }
-.st-persona blockquote { grid-column: 1 / -1; margin: 0; padding: 16px 20px; background: #f3f3f3; font-size: 16px; font-style: italic; }
+.st-persona img { grid-row: 1 / span 2; }
+.st-persona blockquote { grid-column: 2; align-self: start; margin: 0; padding: 16px 20px; background: #f3f3f3; font-size: 16px; font-style: italic; }
 
 /* ---------- Benchmark ---------- */
 .st-figure { margin: 0; background: var(--white); filter: drop-shadow(0 20px 30px rgba(0,0,0,0.14)); position: relative; }
@@ -473,6 +474,8 @@ ul { padding: 0; list-style: none; }
   .st { font-size: 18px; }
   .st-bars div { grid-template-columns: 110px minmax(0, 1fr) 72px; gap: 10px; }
   .st-persona { grid-template-columns: 1fr; }
+  .st-persona img { grid-row: auto; }
+  .st-persona blockquote { grid-column: 1; }
   .st-persona img { width: 160px; }
   .st-screens { grid-template-columns: 1fr; }
 }
