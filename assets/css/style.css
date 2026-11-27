@@ -590,3 +590,5 @@ ul { padding: 0; list-style: none; }
 .st-wf--fill .st-wf__col { display: flex; flex-direction: column; }
 .st-wf--fill .st-wf__pair .st-scroll { flex: 1 1 0; height: 0; min-height: 420px; }
 @media (max-width: 1023px) { .st-wf--fill .st-wf__pair .st-scroll { flex: none; height: 420px; } }
+.st-wf__img img.st-match-scroll { height: 420px; object-fit: cover; object-position: top; }
+@media (max-width: 750px) { .st-wf__img img.st-match-scroll { height: 340px; } }
