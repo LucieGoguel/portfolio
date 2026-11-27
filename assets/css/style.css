@@ -578,3 +578,4 @@ ul { padding: 0; list-style: none; }
   .st-persona blockquote { margin: 20px; }
 }
 .st-wrap > .st-lead + .st-photos { margin-top: 20px; }
+#chiffres .st-kpi span { font-size: 20px; }
